@@ -1,0 +1,181 @@
+---
+title: "Intro to Github"
+subtitle: "For the Stats Kids"
+format:
+  revealjs
+editor: visual
+---
+
+## Why Git
+
+<br> <br>
+
+::: {style="text-align: center"}
+**Git** is a *version control system.* It tracks document changes, and remembers old file versions so that you can easily retrieved them (once they are in a git **repository**).
+
+You can keep track of *what* changed *when*, and revert to old file versions.
+:::
+
+<br>
+
+::: {style="text-align: center"}
+::: {style="font-size: smaller"}
+[(You can think about it as a fancier save button!)]{style="opacity:0.6; color:#cc0000"}
+:::
+:::
+
+## Why Github
+
+<br> <br>
+
+::: {style="text-align: center"}
+Github is a *web based* hosting service for git repositories.
+It is a great tool to share and collaborate on code.
+
+You can share scripts, plots, and reports with others quickly, collaborate in real time, and review each others' work.
+:::
+
+<br>
+
+::: {style="text-align: center"}
+::: {style="font-size: smaller"}
+[(You can think about it as a Google Drive / Google Doc for code!)]{style="opacity:0.6; color:#cc0000"}
+:::
+:::
+
+## Github & R-Studio
+
+<br> <br>
+
+::: {style="text-align: center"}
+If you work frequently in R, the popular IDE RStudio has a Git integration - all your workflow can be in one place.
+:::
+
+<br>
+
+::: {style="text-align: center"}
+::: {style="font-size: smaller"}
+[You can version-control your files and upload them to Github both via the embedded Terminal in RStudio or via the built-in UI]{style="opacity:0.6"}
+:::
+:::
+
+## Before we start.
+
+<br>
+
+Let's ensure that:
+
+1.  We have git installed on our computer.\
+    Type in terminal (cmd+Space+"Terminal"): <br> `git --version`
+2.  We have a Github account and username. Check at: <br> `https://github.com/`
+
+## setup
+
+> [git for OS](https://git-scm.com/download/mac).
+> <br> [git for Windows](https://gitforwindows.org/).<br> [git for Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+## Creating a repository
+
+![](images/new-repo.png)
+
+## Getting your repo https link
+
+![](images/code-https.png)
+
+## Checking out an existing repository: RStudio
+
+> File \> New Project \> Version Control \> Git \> enter link.
+
+::: aside
+NOTE!
+If you just installed Git on your machine, you will need to:
+
+-   Go to Global Options (from the Tools menu)
+-   Click Git/SVN
+-   Click Enable version control interface for RStudio projects
+-   If necessary, enter the path for your Git or SVN executable where provided. You can also create or add your RSA key for SSH if necessary.
+:::
+
+## Checking out an existing repository: CMDLine
+
+<br>
+
+> `git clone https://github.com/username/repo-name`
+
+## Git's most important commands
+
+::: incremental
+-   `git status` : what files have changes?
+-   `git add`: Select files *with changes* that you would like to save. <br>
+-   `git commit -m "my new changes"`: bundle the changes made to *all* the files and stage them. <br>
+-   `Git push` : send your changes to Github
+
+::: aside
+Usually people refer to these three steps together as "a commmit" - that is a *push* to Github that includes changes to one or several files.
+:::
+:::
+
+## Let's try it out!
+
+<br> <br> <br>
+
+::: {style="text-align: center"}
+> Create a text file with a single sentence and push it to your repository.
+:::
+
+## Collaborating (with yourself or others)
+
+-   Get their repository link
+-   `Git pull`
+-   Make changes
+-   `git push`
+-   Creating different branches : `git branch`.
+-   Reviewing each others' code : pull requests.
+
+## Let's try it out!
+
+<br> <br> <br>
+
+[Partner up with one or more person:]{style="opacity:0.7"}
+
+::: {style="text-align:center;opacity:0.7"}
+-   add each others as collaborators.\
+-   pull their repository.\
+-   add a file on a different branch.\
+-   create a pull request
+:::
+
+## Code Reviews
+
+::: {.notes}
+show creating a new branch
+:::
+ 
+::: {.r-stack}
+![](images/compare.png){.fragment width="750" height="150"} 
+
+![](images/open-pull.png){.fragment width="700" height="500"}
+
+![](images/review.png){.fragment width="700" height="500"}
+:::
+
+## Tips and Tricks
+
+-   Including a README.md file in your repository.
+-   Including a `.gitignore` file?
+-   Use `git reset --hard origin/main` : to retrieve files from the remote, dropping all local changes.
+-  Use Github UI to retrieve 
+
+## Github Classroom
+
+A Github space where each student can have a repository - makes it easy to review assignments and share materials.
+
+
+## Other Cool Features
+
+::: incremental
+-  You can integrate Github with Overleaf, you can use this to update tables dynamically without copy-pasting. 
+-   You can create your own website and host it on Github! **(more on this soon by BrownBag!)** <br>
+-   You can use github to easily work from HPC (High Performance Computing) or other computing clusters, by pushing/pulling your code from the two machines. <br>
+-   Github can be integrated with code-checkers and linters ("code cleaners"), so that you can test your code every time it gets pushed to Github.
+:::
